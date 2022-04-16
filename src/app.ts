@@ -16,11 +16,11 @@ dotenv.config({
     path: './config.env'
 });
 
-let DropshipTownCSV: any;
+let DropshipTownRepo: any;
 
 const saveData = (json: any) => {
     return new Promise((resolve, reject) => {
-        const bangla = DropshipTownCSV.create({
+        const bangla = DropshipTownRepo.create({
             productName: json['Product Name'],
             sku: json['SKU'],
             upc: json['UPC'],
@@ -47,7 +47,7 @@ const saveData = (json: any) => {
         });
 
         try {
-            resolve(DropshipTownCSV.save(bangla));
+            resolve(DropshipTownRepo.save(bangla));
         } catch (error) {
             reject(error);
         }
@@ -70,7 +70,7 @@ const connectDatabase = async () => {
             synchronize: true
         });
 
-        DropshipTownCSV = connection.getRepository(DropshipTownCSV);
+        DropshipTownRepo = connection.getRepository(DropshipTownCSV);
 
         // here you can start to work with your entities
         console.log('MySQL Database Connection Status: success');
@@ -88,8 +88,7 @@ const connectDatabase = async () => {
             .subscribe(
                 (json: any) => saveData(json),
                 (err: Error) => console.error(err.message)
-            )
-
+            );
     } catch (error) {
         console.log('Error in Reading File ' + error);
     }

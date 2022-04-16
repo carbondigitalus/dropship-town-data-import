@@ -4,6 +4,7 @@
     "description": "TypeORM based tool for loading products into a properly formatted MySQL database template.",
     "main": "app.ts",
     "scripts": {
+        "start": "NODE_ENV=development node './**/*.ts' --exec 'ts-node' src/app.ts",
         "start:dev": "NODE_ENV=development nodemon --watch './**/*.ts' --exec 'ts-node' src/app.ts"
     },
     "repository": {

@@ -1,0 +1,15 @@
+{
+    "name": "nouxlife_dropship_data",
+    "type": "mysql2",
+    "port": 3306,
+    "synchronize": true,
+    "logging": false,
+    "entities": ["src/db/entity/*.ts"],
+    "subscribers": ["src/db/subscriber/*.ts"],
+    "migrations": ["src/db/migration/*.ts"],
+    "cli": {
+        "entitiesDir": "src/db/entity",
+        "migrationsDir": "src/db/migration",
+        "subscribersDir": "src/db/subscriber"
+    }
+}

@@ -26,7 +26,7 @@ import {
     WarrantyTypes
 } from '../../enums';
 
-@Entity('bangalla_product_list')
+@Entity('dropship-town-product-list')
 export default class DropshipTownCSV extends BaseEntity {
     // COLUMNS
     @PrimaryGeneratedColumn('uuid')

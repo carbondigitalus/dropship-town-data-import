@@ -1,1 +1,1 @@
-export { default as DropshipTownProductListCSVTemplate } from './DropshipTownProductListCSVTemplate';
+export { default as DropshipTownCSV } from './DropshipTownCSV';

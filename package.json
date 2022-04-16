@@ -62,7 +62,9 @@
         "webpack-dev-server": "^4.4.0"
     },
     "dependencies": {
+        "axios": "^0.26.1",
         "class-validator": "^0.13.2",
+        "csvtojson": "^2.0.10",
         "mysql2": "^2.3.3",
         "reflect-metadata": "^0.1.13",
         "typeorm": "^0.3.3"

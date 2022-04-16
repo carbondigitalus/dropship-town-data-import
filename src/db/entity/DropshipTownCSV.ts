@@ -44,11 +44,6 @@ export default class DropshipTownCSV extends BaseEntity {
     @IsNotEmpty()
     creation_date: Date;
 
-    @Column({ type: 'datetime' })
-    @IsDate()
-    @IsNotEmpty()
-    last_updated: Date;
-
     @Column()
     @IsNumber()
     @IsNotEmpty()

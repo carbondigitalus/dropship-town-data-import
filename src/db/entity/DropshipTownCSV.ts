@@ -27,7 +27,7 @@ import {
 } from '../../enums';
 
 @Entity('bangalla_product_list')
-export default class DropshipTownProductListCSVTemplate extends BaseEntity {
+export default class DropshipTownCSV extends BaseEntity {
     // COLUMNS
     @PrimaryGeneratedColumn('uuid')
     @IsNotEmpty()

@@ -83,12 +83,9 @@ const connectDatabase = async () => {
         // here you can start to work with your entities
         console.log('MySQL Database Connection Status: success');
 
+        // original file
         const { data } = await axios.get(
             'https://www.dropshiptown.com/api/products.csv'
-        );
-
-        console.log(
-            'Successfully read data from https://www.dropshiptown.com/api/products.csv'
         );
 
         csv()
